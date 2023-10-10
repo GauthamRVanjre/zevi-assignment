@@ -1,7 +1,16 @@
 import React from "react";
+import SuggestionBox from "../components/SuggestionBox";
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = React.useState("");
+  const [showSuggestions, setShowSuggestions] = React.useState(false);
+
+  /**
+   * The handleInputClick function toggles the visibility of suggestions.
+   */
+  const handleInputClick = () => {
+    setShowSuggestions(!showSuggestions);
+  };
 
   /**
    * When the user types in the search box, the value of the search box is set to the state of the
@@ -22,6 +31,7 @@ const Home = () => {
           <label className="search-input-field-container">
             <input
               onChange={handleSearchTermChange}
+              onClick={handleInputClick}
               type="text"
               placeholder="Articles names or keywords"
             />
@@ -38,6 +48,7 @@ const Home = () => {
               </svg>
             </span>
           </label>
+          {showSuggestions && <SuggestionBox />}
         </div>
       </section>
     </>
