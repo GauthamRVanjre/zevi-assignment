@@ -1,5 +1,4 @@
 .search-component {
-  background-color: #f7f7f7;
   height: 100vh;
 }
 
@@ -13,13 +12,28 @@
   background-color: #fff;
 }
 
-input {
+.search-input-field-container {
+  display: flex;
+  flex-direction: row;
   height: 38px;
   width: 400px;
-  padding: 15px;
+  padding: 25px;
+  padding-bottom: 40px;
   border: none;
-  margin-right: 10px;
   background-color: #f7f7f7;
+}
+
+.icon-spacer {
+  padding-left: 8rem;
+  padding-bottom: -5px;
+}
+
+input {
+  height: 30px;
+  width: 200px;
+  margin-top: -10px;
+  background-color: #f7f7f7;
+  outline: none;
 }
 
 .App-header {
