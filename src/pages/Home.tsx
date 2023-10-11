@@ -25,6 +25,15 @@ const Home = () => {
     setSearchTerm(event.target.value);
   };
 
+  /**
+   * The function `handleSuggestionSelect` sets the search term to the selected suggestion.
+   * @param {string} suggestion - The `suggestion` parameter is a string that represents the selected
+   * suggestion.
+   */
+  const handleSuggestionSelect = (suggestion: string) => {
+    setSearchTerm(suggestion);
+  };
+
   return (
     <>
       <section className="search-component ">
@@ -33,6 +42,7 @@ const Home = () => {
             <input
               onChange={handleSearchTermChange}
               onClick={handleInputClick}
+              value={searchTerm}
               type="text"
               placeholder="Articles names or keywords"
             />
@@ -49,10 +59,12 @@ const Home = () => {
               </svg>
             </span>
           </label>
-          {showSuggestions && <SuggestionBox />}
+          {showSuggestions && (
+            <SuggestionBox onSuggestionSelect={handleSuggestionSelect} />
+          )}
         </div>
         <div className="flex flex-col ml-4 justify-center w-full align-center md:mr-2">
-          <ProductsList />
+          <ProductsList searchTerm={searchTerm} />
         </div>
       </section>
     </>

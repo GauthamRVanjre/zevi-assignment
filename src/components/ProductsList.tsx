@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import { productType } from "../types";
 import ProductCard from "./ProductCard";
 
-const ProductsList = () => {
+interface ProductsListProps {
+  searchTerm: string;
+}
+
+const ProductsList: React.FC<ProductsListProps> = ({ searchTerm }) => {
   const [productsList, setProductsList] = useState<productType[]>([]);
 
   const fetchProducts = async () => {
