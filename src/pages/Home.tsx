@@ -50,6 +50,8 @@ const Home = () => {
             </span>
           </label>
           {showSuggestions && <SuggestionBox />}
+        </div>
+        <div className="flex flex-col ml-4 justify-center w-full align-center ">
           <ProductsList />
         </div>
       </section>
