@@ -51,7 +51,7 @@ const Home = () => {
           </label>
           {showSuggestions && <SuggestionBox />}
         </div>
-        <div className="flex flex-col ml-4 justify-center w-full align-center ">
+        <div className="flex flex-col ml-4 justify-center w-full align-center md:mr-2">
           <ProductsList />
         </div>
       </section>
