@@ -9,7 +9,7 @@ const SuggestionBox: React.FC<ShowSuggestionProps> = ({
   onSuggestionSelect,
 }) => {
   // Replace this with actual trend suggestions
-  const trendSuggestions = ["Trend 1", "Trend 2", "Trend 3"];
+  const trendSuggestions = ["iPhone", "Perfume", "Book"];
 
   const handleSuggestionClick = (suggestion: string) => {
     onSuggestionSelect(suggestion);
