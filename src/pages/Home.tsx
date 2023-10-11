@@ -1,5 +1,6 @@
 import React from "react";
 import SuggestionBox from "../components/SuggestionBox";
+import ProductsList from "../components/ProductsList";
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = React.useState("");
@@ -49,6 +50,7 @@ const Home = () => {
             </span>
           </label>
           {showSuggestions && <SuggestionBox />}
+          <ProductsList />
         </div>
       </section>
     </>
