@@ -47,3 +47,11 @@ input {
   margin: 0 auto;
   align-items: center;
 }
+
+/* no page styles */
+.nopage-container {
+  height: 100vh;
+  background-image: url("/public/dresses_image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
